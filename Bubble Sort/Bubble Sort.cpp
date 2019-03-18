@@ -7,7 +7,7 @@ using namespace std;
 
 // function algorithm that returns the sorted array
 // algoritmo da função que retorna o array ordenado
-int * bubbleSort(int *arr)
+int * bubbleSort(int arr[])
 {
 	for (int i = 0; i < length - 1; i++)
 	{
