@@ -2,6 +2,8 @@
 
 public class Main
 {
+	// function algorithm that returns the sorted array
+	// algoritmo da função que retorna o array ordenado
 	private static int[] bubbleSort(int[] arr)
 	{
 		for (int i = 0; i < arr.length - 1; i++)
@@ -20,16 +22,14 @@ public class Main
 		return arr;
 	}
 
+	// main function only to call and test the sort function
+	// função principal apenas para chamar e testar a função de ordenação
 	public static void main(String[] args)
 	{
-		int[] arr = new int[10], arrSorted;
+		int[] arr = {5, 2, -3, 10, 23, 99, -1, 7, 93, 0};
+		int[] arrSorted = bubbleSort(arr);
 
-		for (int i = 0; i < arr.length; i++)
-			arr[i] = Integer.parseInt(System.console().readLine());
-
-		arrSorted = bubbleSort(arr);
-
-		System.out.println("\nArray Sorted:");
+		System.out.println("Array Sorted:");
 
 		for (int a: arrSorted)
 			System.out.println(a);

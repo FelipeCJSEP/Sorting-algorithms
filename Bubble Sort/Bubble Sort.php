@@ -23,12 +23,10 @@ function bubbleSort($arr)
 
 // code only to call and test the sort function
 // código apenas para chamar e testar a função de ordenação
-for ($i = 0; $i < 10; $i++)
-	$arr[$i] = readline();
-
+$arr = array(5, 2, -3, 10, 23, 99, -1, 7, 93, 0);
 $arrSorted = bubbleSort($arr);
 
-echo "\nArray Sorted:\n";
+echo "Array Sorted:\n";
 
 foreach ($arrSorted as $a)
 	echo "$a\n";

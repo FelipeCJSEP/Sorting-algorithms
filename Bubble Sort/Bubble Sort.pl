@@ -24,16 +24,12 @@ sub bubbleSort
 
 # code only to call and test the sort function
 # código apenas para chamar e testar a função de ordenação
-for ($i = 0; $i < 10; $i++)
-{
-	$arr[$i] = <>;
-}
-
+@arr = (5, 2, -3, 10, 23, 99, -1, 7, 93, 0);
 @arrSorted = bubbleSort @arr;
 
-print "\nArray Sorted:\n";
+print "Array Sorted:\n";
 
 foreach $a (@arrSorted)
 {
-	print $a;
+	print "$a\n";
 }

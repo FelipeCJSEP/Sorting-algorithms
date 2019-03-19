@@ -28,15 +28,12 @@ int * bubbleSort(int arr[])
 // função principal apenas para chamar e testar a função de ordenação
 int main(void)
 {
-	int arr[length];
+	int arr[length] = {5, 2, -3, 10, 23, 99, -1, 7, 93, 0};
 	int *arrSorted;
-
-	for (int i = 0; i < length; i++)
-		scanf("%d", &arr[i]);
 
 	arrSorted = bubbleSort(arr);
 
-	printf("\nArray Sorted:\n");
+	printf("Array Sorted:\n");
 
 	for (int i = 0; i < length; i++)
 		printf("%d\n", arrSorted[i]);

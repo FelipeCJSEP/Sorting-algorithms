@@ -30,14 +30,10 @@ namespace Bubble_Sort
 		// função principal apenas para chamar e testar a função de ordenação
 		static void Main(string[] args)
 		{
-			int[] arr = new int[10], arrSorted;
+			int[] arr = {5, 2, -3, 10, 23, 99, -1, 7, 93, 0};
+			int[] arrSorted = bubbleSort(arr);
 
-			for (int i = 0; i < arr.Length; i++)
-				arr[i] = int.Parse(Console.ReadLine());
-
-			arrSorted = bubbleSort(arr);
-
-			Console.WriteLine("\nArray Sorted:");
+			Console.WriteLine("Array Sorted:");
 
 			foreach (int a in arrSorted)
 				Console.WriteLine(a);

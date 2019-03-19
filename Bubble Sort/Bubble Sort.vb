@@ -21,16 +21,9 @@ Module Bubble_Sort
 	' main function only to call and test the sort function
 	' função principal apenas para chamar e testar a função de ordenação
 	Sub Main()
-		Dim arr(9) As Integer
-		Dim arrSorted As Integer()
+		Dim arr As Integer() = {5, 2, -3, 10, 23, 99, -1, 7, 93, 0}
+		Dim arrSorted As Integer() = bubbleSort(arr)
 
-		For i As Integer = 0 To arr.Length - 1
-			arr(i) = Console.ReadLine()
-		Next
-
-		arrSorted = bubbleSort(arr)
-
-		Console.WriteLine
 		Console.WriteLine("ArraySorted:")
 
 		For Each a As Integer In arrSorted

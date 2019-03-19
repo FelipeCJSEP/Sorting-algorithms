@@ -18,12 +18,7 @@ end
 
 # code only to call and test the sort function
 # codigo apenas para chamar e testar a funcao de ordenacao
-arr = Array.new
-
-for i in 0..9
-	arr.push gets.to_i
-end
-
+arr = Array[5, 2, -3, 10, 23, 99, -1, 7, 93, 0]
 arrSorted = bubbleSort(arr)
 
 puts "\nArray Sorted:\n"

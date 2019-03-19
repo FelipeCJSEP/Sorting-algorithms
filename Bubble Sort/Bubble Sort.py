@@ -13,14 +13,10 @@ def bubbleSort(arr):
 
 # code only to call and test the sort function
 # codigo apenas para chamar e testar a funcao de ordenacao
-arr = []
-
-for i in range(10):
-	arr.append(input())
-
+arr = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0]
 arrSorted = bubbleSort(arr)
 
-print("\nArray Sorted:")
+print("Array Sorted:")
 
 for a in arrSorted:
 	print(a)

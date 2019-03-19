@@ -2,9 +2,6 @@
 
 program Bubble_Sort;
 
-const
-	length = 9; // constant to set array size // constante para definir o tamanho do array
-
 // function algorithm that returns the sorted array
 // algoritmo da função que retorna o array ordenado
 type
@@ -14,9 +11,9 @@ function bubbleSort(arr: arrayOfInteger): arrayOfInteger;
 var
 	i, j, swap: integer;
 begin
-	for i := 0 to length - 1 do
+	for i := 0 to length(arr) - 2 do
 	begin
-		for j := i + 1 to length do
+		for j := i + 1 to length(arr) - 1 do
 		begin
 			if arr[i] > arr[j] then
 			begin
@@ -33,18 +30,25 @@ end;
 // main function only to call and test the sort function
 // função principal apenas para chamar e testar a função de ordenação
 var
-	arr: array[0..length] of integer;
+	arr: array[0..9] of integer;
 	arrSorted: array of integer;
-	i: integer;
+	a: integer;
 begin
-	for i := 0 to length do
-		readln(arr[i]);
+	arr[0] := 5;
+	arr[1] := 2;
+	arr[2] := -3;
+	arr[3] := 10;
+	arr[4] := 23;
+	arr[5] := 99;
+	arr[6] := -1;
+	arr[7] := 7;
+	arr[8] := 93;
+	arr[9] := 0;
 
 	arrSorted := bubbleSort(arr);
 
-	writeln(' ');
 	writeln('Array Sorted');
 
-	for i in arrSorted do
-		writeln(i);
+	for a in arrSorted do
+		writeln(a);
 end.
