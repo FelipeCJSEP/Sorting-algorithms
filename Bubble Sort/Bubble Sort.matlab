@@ -20,7 +20,7 @@ end
 arr = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0];
 arrSorted = bubbleSort(arr)
 
-disp ("Array Sorted:");
+disp("Array Sorted:");
 
 for i = 1: length(arrSorted)
 	disp(arrSorted(i));

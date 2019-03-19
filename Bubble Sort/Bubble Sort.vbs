@@ -24,7 +24,7 @@ Module Bubble_Sort
 		Dim arr As Integer() = {5, 2, -3, 10, 23, 99, -1, 7, 93, 0}
 		Dim arrSorted As Integer() = bubbleSort(arr)
 
-		Console.WriteLine("ArraySorted:")
+		Console.WriteLine("Array Sorted:")
 
 		For Each a As Integer In arrSorted
 			Console.WriteLine(a)

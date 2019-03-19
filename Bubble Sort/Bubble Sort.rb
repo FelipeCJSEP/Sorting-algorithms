@@ -21,5 +21,5 @@ end
 arr = Array[5, 2, -3, 10, 23, 99, -1, 7, 93, 0]
 arrSorted = bubbleSort(arr)
 
-puts "\nArray Sorted:\n"
+puts "Array Sorted:\n"
 puts arrSorted;
