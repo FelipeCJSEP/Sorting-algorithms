@@ -2,12 +2,12 @@
 
 program Bubble_Sort;
 
-// function algorithm that returns the sorted array
-// algoritmo da função que retorna o array ordenado
 type
 	arrayOfInteger = array of integer;
 
-function bubbleSort(arr: arrayOfInteger): arrayOfInteger;
+// function algorithm that returns the sorted array
+// algoritmo da função que retorna o array ordenado
+function bubbleSort(arr: arrayOfInteger): arrayOfInteger; // arrayOfInteger was set in "type" // arrayOfInteger foi definido em "type"
 var
 	i, j, swap: integer;
 begin
@@ -27,23 +27,13 @@ begin
 	bubbleSort := arr;
 end;
 
-// main function only to call and test the sort function
-// função principal apenas para chamar e testar a função de ordenação
+// code only to call and test the sort function
+// código apenas para chamar e testar a função de ordenação
 var
-	arr: array[0..9] of integer;
+	arr: array[0..9] of integer = (5, 2, -3, 10, 23, 99, -1, 7, 93, 0);
 	arrSorted: array of integer;
 	a: integer;
 begin
-	arr[0] := 5;
-	arr[1] := 2;
-	arr[2] := -3;
-	arr[3] := 10;
-	arr[4] := 23;
-	arr[5] := 99;
-	arr[6] := -1;
-	arr[7] := 7;
-	arr[8] := 93;
-	arr[9] := 0;
 
 	arrSorted := bubbleSort(arr);
 
