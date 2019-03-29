@@ -4,17 +4,26 @@
 # algoritmo da função que retorna o array ordenado
 bubbleSort <- function(arr)
 {
-	for (i in 1: (length(arr) - 1))
+	n = length(arr)
+
+	repeat
 	{
-		for (j in (i + 1): length(arr))
+		swapped <- FALSE;
+		n <- n - 1
+
+		for (i in 1: (n))
 		{
-			if (arr[i] > arr[j])
+			if (arr[i] > arr[i + 1])
 			{
 				swap <- arr[i]
-				arr[i] <- arr[j]
-				arr[j] <- swap
+				arr[i] <- arr[i + 1]
+				arr[i + 1] <- swap
+				swapped <- TRUE
 			}
 		}
+
+		if (!swapped)
+			break
 	}
 
 	return (arr)

@@ -3,15 +3,26 @@
 % function algorithm that returns the sorted array
 % algoritmo da função que retorna o array ordenado
 function bs = bubbleSort(arr)
-	for i = 1: length(arr) - 1
-		for j = i + 1: length(arr)
-			if arr(i) > arr(j)
+	n = length(arr);
+	
+	while (true)
+		swapped = false;
+		n--;
+
+		for i = 1: n
+			if arr(i) > arr(i + 1)
 				swap = arr(i);
-				arr(i) = arr(j);
-				arr(j) = swap;
+				arr(i) = arr(i + 1);
+				arr(i + 1) = swap;
+				swapped = true;
 			end
 		end
+
+		if (!swapped)
+			break;
+		end;
 	end
+	
 	bs = arr;
 end
 

@@ -4,16 +4,25 @@
 // algoritmo da função que retorna o array ordenado
 fn bubble_sort(mut _arr: Vec<i32>) -> Vec<i32>
 {
-	for i in 0.._arr.iter().count() - 2
+	let mut n = _arr.iter().count();
+
+	loop
 	{
-		for _j in i + 1.._arr.iter().count() - 1
+		let mut swapped = false;
+		n -= 1;
+
+		for i in 0..n
 		{
-			if _arr[i] > _arr[_j]
+			if _arr[i] > _arr[i + 1]
 			{
-				let swap = _arr[i];
-				_arr[i] = _arr[_j];
-				_arr[_j] = swap;
+				_arr.swap(i, i + 1);
+				swapped = true;
 			}
+		}
+
+		if !swapped
+		{
+			break;
 		}
 	}
 

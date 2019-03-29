@@ -5,15 +5,22 @@ Module Bubble_Sort
 	' function algorithm that returns the sorted array
 	' algoritmo da função que retorna o array ordenado
 	Function bubbleSort(ByVal ParamArray arr As Integer()) As Integer()
-		For i As Integer = 0 To arr.Length - 2
-			For j As Integer = i + 1 To arr.Length - 1
-				If arr(i) > arr(j) Then
+		Dim n As Integer = arr.Length
+		Dim swapped As Boolean
+
+		Do
+			swapped = false
+			n -= 1
+
+			For i As Integer = 0 To n - 1
+				If arr(i) > arr(i + 1) Then
 					Dim swap As Integer = arr(i)
-					arr(i) = arr(j)
-					arr(j) = swap
+					arr(i) = arr(i + 1)
+					arr(i + 1) = swap
+					swapped = true
 				End If
 			Next
-		Next
+		Loop Until swapped = false
 
 		Return arr
 	End Function

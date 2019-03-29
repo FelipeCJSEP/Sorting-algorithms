@@ -3,12 +3,22 @@
 # function algorithm that returns the sorted array
 # algoritmo da funcao que retorna o array ordenado
 def bubbleSort(arr):
-	for i in range(len(arr) - 1):
-		for j in range(i + 1, len(arr)):
-			if arr[i] > arr[j]:
+	n = len(arr)
+
+	while True:
+		swapped = False
+		n -= 1
+
+		for i in range(n):
+			if arr[i] > arr[i + 1]:
 				swap = arr[i]
-				arr[i] = arr[j]
-				arr[j] = swap
+				arr[i] = arr[i + 1]
+				arr[i + 1] = swap
+				swapped = True
+
+		if swapped == False:
+			break
+
 	return arr
 
 # code only to call and test the sort function

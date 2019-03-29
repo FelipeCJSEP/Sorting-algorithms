@@ -4,18 +4,25 @@
 // algoritmo da função que retorna o array ordenado
 fun bubbleSort(arr: IntArray): IntArray
 {
-	for (i: Int in 0..arr.size - 2)
+	var n: Int = arr.size
+
+	do
 	{
-		for (j: Int in i + 1..arr.size - 1)
+		var swapped = false
+		n--
+
+		for (i: Int in 0..n - 1)
 		{
-			if (arr[i] > arr[j])
+			if (arr[i] > arr[i + 1])
 			{
 				val swap: Int = arr[i]
-				arr[i] = arr[j]
-				arr[j] = swap
+				arr[i] = arr[i + 1]
+				arr[i + 1] = swap
+				swapped = true
 			}
 		}
 	}
+	while (swapped)
 	
 	return arr;
 }

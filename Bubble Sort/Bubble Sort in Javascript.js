@@ -4,18 +4,26 @@
 // algoritmo da função que retorna o array ordenado
 function bubbleSort(arr)
 {
-	for (let i = 0; i < arr.length - 1; i++)
+	let n = arr.length;
+	let swapped;
+
+	do
 	{
-		for (let j = i + 1; j < arr.length; j++)
+		swapped = false;
+		n--;
+
+		for (let i = 0; i < n; i++)
 		{
-			if (arr[i] > arr[j])
+			if (arr[i] > arr[i + 1])
 			{
 				let swap = arr[i];
-				arr[i] = arr[j];
-				arr[j] = swap;
+				arr[i] = arr[i + 1];
+				arr[i + 1] = swap;
+				swapped = true;
 			}
 		}
 	}
+	while (swapped);
 
 	return arr;
 }

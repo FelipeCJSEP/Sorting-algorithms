@@ -2,20 +2,28 @@
 
 // function algorithm that returns the sorted array
 // algoritmo da função que retorna o array ordenado
-int bubbleSort(arr)
+List<int> bubbleSort(arr)
 {
-	for (int i = 0; i < arr.length - 1; i++)
+	int n = arr.length;
+	bool swapped;
+
+	do
 	{
-		for (int j = i + 1; j < arr.length; j++)
+		swapped = false;
+		n--;
+
+		for (int i = 0; i < n; i++)
 		{
-			if (arr[i] > arr[j])
+			if (arr[i] > arr[i + 1])
 			{
 				int swap = arr[i];
-				arr[i] = arr[j];
-				arr[j] = swap;
+				arr[i] = arr[i + 1];
+				arr[i + 1] = swap;
+				swapped = true;
 			}
 		}
 	}
+	while (swapped);
 
 	return arr;
 }
@@ -24,8 +32,8 @@ int bubbleSort(arr)
 // função principal apenas para chamar e testar a função de ordenação
 void main()
 {
-	int arr = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0];
-	int arrSorted = bubbleSort(arr);
+	List<int> arr = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0];
+	List<int> arrSorted = bubbleSort(arr);
 
 	print("Array Sorted:\n");
 

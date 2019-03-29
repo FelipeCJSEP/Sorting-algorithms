@@ -5,18 +5,26 @@ object Bubble_Sort
 	// function algorithm that returns the sorted array
 	// algoritmo da função que retorna o array ordenado
 	def bubbleSort(arr: Array[Int]) : Array[Int] = {
-		for (i <- 0 to arr.length - 2)
+		var n = arr.length;
+		var swapped = false;
+
+		do
 		{
-			for (j <- i + 1 to arr.length - 1)
+			swapped = false;
+			n -= 1;
+
+			for (i <- 0 to n - 1)
 			{
-				if (arr(i) > arr(j))
+				if (arr(i) > arr(i + 1))
 				{
-					var swap: Int = arr(i);
-					arr(i) = arr(j);
-					arr(j) = swap;
+					val swap: Int = arr(i);
+					arr(i) = arr(i + 1);
+					arr(i + 1) = swap;
+					swapped = true;
 				}
 			}
 		}
+		while (swapped);
 
 		return arr
 	}

@@ -1,23 +1,31 @@
 // BUBBLE SORT IN JAVA
 
-public class Main
+public class Bubble_Sort
 {
 	// function algorithm that returns the sorted array
 	// algoritmo da função que retorna o array ordenado
 	private static int[] bubbleSort(int[] arr)
 	{
-		for (int i = 0; i < arr.length - 1; i++)
+		int n = arr.length;
+		boolean swapped;
+
+		do
 		{
-			for (int j = i + 1; j < arr.length; j++)
+			swapped = false;
+			n--;
+
+			for (int i = 0; i < n; i++)
 			{
-				if (arr[i] > arr[j])
+				if (arr[i] > arr[i + 1])
 				{
 					int swap = arr[i];
-					arr[i] = arr[j];
-					arr[j] = swap;
+					arr[i] = arr[i + 1];
+					arr[i + 1] = swap;
+					swapped = true;
 				}
 			}
 		}
+		while (swapped);
 
 		return arr;
 	}

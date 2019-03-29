@@ -4,17 +4,26 @@
 // algoritmo da função que retorna o array ordenado
 int[] bubbleSort(int[] arr)
 {
-	for (int i = 0; i < arr.length - 1; i++)
+	int n = arr.length;
+
+	while (true)
 	{
-		for (int j = i + 1; j < arr.length; j++)
+		boolean swapped = false;
+		n--;
+
+		for (int i = 0; i < n; i++)
 		{
-			if (arr[i] > arr[j])
+			if (arr[i] > arr[i + 1])
 			{
 				int swap = arr[i];
-				arr[i] = arr[j];
-				arr[j] = swap;
+				arr[i] = arr[i + 1];
+				arr[i + 1] = swap;
+				swapped = true;
 			}
 		}
+
+		if (!swapped)
+			break;
 	}
 
 	return arr;

@@ -5,19 +5,25 @@
 sub bubbleSort
 {
 	@arr = @_;
+	$n = scalar @arr;
 
-	for ($i = 0; $i < scalar @arr - 1; $i++)
+	do
 	{
-		for ($j = $i + 1; $j < scalar @arr; $j++)
+		$swapped = 0;
+		$n--;
+
+		for ($i = 0; $i < $n; $i++)
 		{
-			if ($arr[$i] > $arr[$j])
+			if ($arr[$i] > $arr[$i + 1])
 			{
 				$swap = $arr[$i];
-				$arr[$i] = $arr[$j];
-				$arr[$j] = $swap;
+				$arr[$i] = $arr[$i + 1];
+				$arr[$i + 1] = $swap;
+				$swapped = 1;
 			}
 		}
 	}
+	while ($swapped == 1);
 
 	return @arr;
 }

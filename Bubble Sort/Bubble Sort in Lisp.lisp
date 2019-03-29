@@ -3,15 +3,21 @@
 ; function algorithm that returns the sorted array
 ; algoritmo da função que retorna o array ordenado
 (defun bubbleSort(arr)
-    (loop for i from 0 to (- (array-total-size arr) 2) do
-        (loop for j from (+ i 1) to (- (array-total-size arr) 1) do
-            (cond ((> (aref arr i) (aref arr j))
+    (setf n (array-total-size arr))
+    
+    (loop do
+        (setf swapped 0)
+        (setf n (- n 1))
+
+        (loop for i from 0 to (- n 1) do
+            (cond ((> (aref arr i) (aref arr (+ i 1)))
                 (setf swap (aref arr i))
-                (setf (aref arr i) (aref arr j))
-                (setf (aref arr j) swap)
+                (setf (aref arr i) (aref arr (+ i 1)))
+                (setf (aref arr (+ i 1)) swap)
+                (setf swapped 1)
             ))
         )
-    )
+    while (= swapped 1))
 
 	(return-from bubbleSort arr)
 )

@@ -9,20 +9,25 @@ type
 // algoritmo da função que retorna o array ordenado
 function bubbleSort(arr: arrayOfInteger): arrayOfInteger; // arrayOfInteger was set in "type" // arrayOfInteger foi definido em "type"
 var
-	i, j, swap: integer;
+	i, n, swap: integer;
+	swapped: boolean;
 begin
-	for i := 0 to length(arr) - 2 do
-	begin
-		for j := i + 1 to length(arr) - 1 do
+	n := length(arr);
+	repeat
+		swapped := false;
+		n := n - 1;
+
+		for i := 0 to n - 1 do
 		begin
-			if arr[i] > arr[j] then
+			if arr[i] > arr[i + 1] then
 			begin
 				swap := arr[i];
-				arr[i] := arr[j];
-				arr[j] := swap;
+				arr[i] := arr[i + 1];
+				arr[i + 1] := swap;
+				swapped := true;
 			end;
 		end;
-	end;
+	until swapped = false;
 
 	bubbleSort := arr;
 end;

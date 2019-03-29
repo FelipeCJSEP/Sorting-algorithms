@@ -5,13 +5,23 @@ package main
 // function algorithm that returns the sorted array
 // algoritmo da função que retorna o array ordenado
 func bubbleSort(arr []int) []int {
-	for i := 0; i < len(arr) - 1; i++ {
-		for j := i + 1; j < len(arr); j++ {
-			if (arr[i] > arr[j]) {
+	var n int = len(arr)
+	
+	for {
+		var swapped bool = false
+		n--
+
+		for i := 0; i < n; i++ {
+			if arr[i] > arr[i + 1] {
 				var swap int = arr[i]
-				arr[i] = arr[j]
-				arr[j] = swap
+				arr[i] = arr[i + 1]
+				arr[i + 1] = swap
+				swapped = true;
 			}
+		}
+		
+		if !swapped {
+			break;
 		}
 	}
 

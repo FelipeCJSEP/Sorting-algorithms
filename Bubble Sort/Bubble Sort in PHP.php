@@ -5,18 +5,25 @@
 // algoritmo da função que retorna o array ordenado
 function bubbleSort($arr)
 {
-	for ($i = 0; $i < count($arr) - 1; $i++)
+	$n = count($arr);
+
+	do
 	{
-		for ($j = $i + 1; $j < count($arr); $j++)
+		$swapped = false;
+		$n--;
+
+		for ($i = 0; $i < $n; $i++)
 		{
-			if ($arr[$i] > $arr[$j])
+			if ($arr[$i] > $arr[$i + 1])
 			{
 				$swap = $arr[$i];
-				$arr[$i] = $arr[$j];
-				$arr[$j] = $swap;
+				$arr[$i] = $arr[$i + 1];
+				$arr[$i + 1] = $swap;
+				$swapped = true;
 			}
 		}
 	}
+	while ($swapped);
 
 	return $arr;
 }

@@ -8,17 +8,26 @@ procedure Bubble_Sort is
 	-- function algorithm that returns the sorted array
 	-- algoritmo da função que retorna o array ordenado
 	function bubbleSort(arr: arrayOfInteger) return arrayOfInteger is -- "arrayOfInteger" was set in "type" -- "arrayOfInteger" foi definido em "type"
-		swap: integer;
+		n, swap: integer;
+		swapped: boolean;
 		arrSorted: arrayOfInteger := arr;
 	begin
-		for i in 0..arrSorted'Length - 2 loop
-			for j in i + 1..arrSorted'Length - 1 loop
-				if arrSorted(i) > arrSorted(j) then
+		n := arrSorted'Length;
+
+		loop
+			swapped := false;
+			n := n - 1;
+
+			for i in 0..n - 1 loop
+				if arrSorted(i) > arrSorted(i + 1) then
 					swap := arrSorted(i);
-					arrSorted(i) := arrSorted(j);
-					arrSorted(j) := swap;
+					arrSorted(i) := arrSorted(i + 1);
+					arrSorted(i + 1) := swap;
+					swapped := true;
 				end if;
 			end loop;
+
+			exit when swapped = false;
 		end loop;
 
 		return arrSorted;
