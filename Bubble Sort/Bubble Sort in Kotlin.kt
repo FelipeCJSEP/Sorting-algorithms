@@ -24,15 +24,15 @@ fun bubbleSort(arr: IntArray): IntArray
 	}
 	while (swapped)
 	
-	return arr;
+	return arr
 }
 
 // main function only to call and test the sort function
 // função principal apenas para chamar e testar a função de ordenação
 fun main()
 {
-	val arr: IntArray = intArrayOf(5, 2, -3, 10, 23, 99, -1, 7, 93, 0);
-	val arrSorted: IntArray = bubbleSort(arr);
+	val arr: IntArray = intArrayOf(5, 2, -3, 10, 23, 99, -1, 7, 93, 0)
+	val arrSorted: IntArray = bubbleSort(arr)
 
 	println("Array Sorted:")
 

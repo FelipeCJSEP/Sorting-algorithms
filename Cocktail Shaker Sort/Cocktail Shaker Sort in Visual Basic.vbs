@@ -1,17 +1,18 @@
-' BUBBLE SORT IN VISUAL BASIC
+' COCKTAIL SHAKER SORT IN VISUAL BASIC
 
-Module Bubble_Sort
+Module Cocktail_Shaker_Sort
 	' function algorithm that returns the sorted array
 	' algoritmo da função que retorna o array ordenado
-	Function bubbleSort(ByVal ParamArray arr As Integer()) As Integer()
-		Dim n As Integer = arr.Length
+	Function cocktailShakerSort(ByVal ParamArray arr As Integer()) As Integer()
+		Dim beginIndex As Integer = 0
+		Dim endIndex As Integer = arr.Length
 		Dim swapped As Boolean
 
 		Do
 			swapped = false
-			n -= 1
+			endIndex -= 1
 
-			For i As Integer = 0 To n - 1
+			For i As Integer = beginIndex To endIndex - 1
 				If arr(i) > arr(i + 1) Then
 					Dim swap As Integer = arr(i)
 					arr(i) = arr(i + 1)
@@ -19,6 +20,20 @@ Module Bubble_Sort
 					swapped = true
 				End If
 			Next
+
+			If swapped = true Then
+				swapped = false
+				beginIndex += 1
+
+				For i As Integer = endIndex - 1 To beginIndex Step -1
+					If arr(i) < arr(i - 1) Then
+						Dim swap As Integer = arr(i)
+						arr(i) = arr(i - 1)
+						arr(i - 1) = swap
+						swapped = true
+					End If
+				Next
+			End If
 		Loop Until swapped = false
 
 		Return arr
@@ -28,7 +43,7 @@ Module Bubble_Sort
 	' função principal apenas para chamar e testar a função de ordenação
 	Sub Main()
 		Dim arr As Integer() = {5, 2, -3, 10, 23, 99, -1, 7, 93, 0}
-		Dim arrSorted As Integer() = bubbleSort(arr)
+		Dim arrSorted As Integer() = cocktailShakerSort(arr)
 
 		Console.WriteLine("Array Sorted:")
 

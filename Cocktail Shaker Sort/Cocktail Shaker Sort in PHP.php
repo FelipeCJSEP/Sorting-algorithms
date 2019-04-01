@@ -1,18 +1,19 @@
-<?php
-// BUBBLE SORT IN PHP
+<?php 
+// COCKTAIL SHAKER SORT IN PHP
 
 // function algorithm that returns the sorted array
 // algoritmo da função que retorna o array ordenado
-function bubbleSort($arr)
+function cocktailShakerSort($arr)
 {
-	$n = count($arr);
+	$beginIndex = 0;
+	$endIndex = count($arr);
 
 	do
 	{
 		$swapped = false;
-		$n--;
+		$endIndex--;
 
-		for ($i = 0; $i < $n; $i++)
+		for ($i = $beginIndex; $i < $endIndex; $i++)
 		{
 			if ($arr[$i] > $arr[$i + 1])
 			{
@@ -20,6 +21,23 @@ function bubbleSort($arr)
 				$arr[$i] = $arr[$i + 1];
 				$arr[$i + 1] = $swap;
 				$swapped = true;
+			}
+		}
+
+		if ($swapped)
+		{
+			$swapped = false;
+			$beginIndex++;
+
+			for ($i = $endIndex - 1; $i >= $beginIndex; $i--)
+			{
+				if ($arr[$i] < $arr[$i - 1])
+				{
+					$swap = $arr[$i];
+					$arr[$i] = $arr[$i - 1];
+					$arr[$i - 1] = $swap;
+					$swapped = true;
+				}
 			}
 		}
 	}
@@ -31,7 +49,7 @@ function bubbleSort($arr)
 // code only to call and test the sort function
 // código apenas para chamar e testar a função de ordenação
 $arr = array(5, 2, -3, 10, 23, 99, -1, 7, 93, 0);
-$arrSorted = bubbleSort($arr);
+$arrSorted = cocktailShakerSort($arr);
 
 echo "Array Sorted:\n";
 

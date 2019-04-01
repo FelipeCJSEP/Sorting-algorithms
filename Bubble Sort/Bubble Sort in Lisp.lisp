@@ -27,7 +27,7 @@
 (setf arr (make-array '(10) :initial-contents' (5 2 -3 10 23 99 -1 7 93 0)))
 (setf arrSorted (bubbleSort arr))
 
-(write-line "Array Sorted")
+(write-line "Array Sorted:")
 
 (loop for i from 0 to (- (array-total-size arrSorted) 1) do
 	(print (aref arrSorted i))

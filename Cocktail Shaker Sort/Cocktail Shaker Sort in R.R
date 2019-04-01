@@ -1,17 +1,18 @@
-# BUBBLE SORT IN R
+# COCKTAIL SHAKER SORT IN R
 
 # function algorithm that returns the sorted array
 # algoritmo da função que retorna o array ordenado
-bubbleSort <- function(arr)
+cocktailShakerSort <- function(arr)
 {
-	n <- length(arr)
+	beginIndex <- 1
+	endIndex <- length(arr)
 
 	repeat
 	{
-		swapped <- FALSE
-		n <- n - 1
+		swap <- FALSE
+		endIndex <- endIndex - 1
 
-		for (i in 1: n)
+		for (i in beginIndex: endIndex)
 		{
 			if (arr[i] > arr[i + 1])
 			{
@@ -19,6 +20,23 @@ bubbleSort <- function(arr)
 				arr[i] <- arr[i + 1]
 				arr[i + 1] <- swap
 				swapped <- TRUE
+			}
+		}
+
+		if (swapped)
+		{
+			swapped <- FALSE
+			beginIndex <- beginIndex + 1
+
+			for (i in endIndex: beginIndex)
+			{
+				if (arr[i] < arr[i - 1])
+				{
+					swap <- arr[i]
+					arr[i] <- arr[i - 1]
+					arr[i - 1] <- swap
+					swapped <- TRUE
+				}
 			}
 		}
 
@@ -32,7 +50,7 @@ bubbleSort <- function(arr)
 # code only to call and test the sort function
 # código apenas para chamar e testar a função de ordenação
 arr <- c(5, 2, -3, 10, 23, 99, -1, 7, 93, 0)
-arrSorted <- bubbleSort(arr)
+arrSorted <- cocktailShakerSort(arr)
 print("Array Sorted:")
 
 for (i in 1: length(arrSorted))

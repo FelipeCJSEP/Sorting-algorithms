@@ -1,18 +1,30 @@
-# BUBBLE SORT IN JULIA
+# COCKTAIL SORT IN JULIA
 
 # function algorithm that returns the sorted array
 # algoritmo da função que retorna o array ordenado
-function bubbleSort(arr)
-	n = length(arr)
+function cocktailShakerSort(arr)
+	beginIndex, endIndex = 1, length(arr)
 
 	while true
 		swapped = false
-		n -= 1
+		endIndex -= 1
 
-		for i = 1: n
+		for i = beginIndex: endIndex
 			if arr[i] > arr[i + 1]
 				arr[i], arr[i + 1] = arr[i + 1], arr[i]
 				swapped = true
+			end
+		end
+
+		if swapped
+			swapped = false
+			beginIndex += 1
+
+			for i = endIndex: -1: beginIndex
+				if arr[i] < arr[i - 1]
+					arr[i], arr[i - 1] = arr[i - 1], arr[i]
+					swapped = true
+				end
 			end
 		end
 
@@ -25,7 +37,7 @@ end
 # code only to call and test the sort function
 # código apenas para chamar e testar a função de ordenação
 arr = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0]
-arrSorted = bubbleSort(arr)
+arrSorted = cocktailShakerSort(arr)
 
 println("Array Sorted:")
 

@@ -39,7 +39,6 @@ var
 	arrSorted: array of integer;
 	a: integer;
 begin
-
 	arrSorted := bubbleSort(arr);
 
 	writeln('Array Sorted');
