@@ -1,4 +1,4 @@
-; COCKTAIL SHAKER SORT
+; COCKTAIL SHAKER SORT IN LISP
 
 ; function algorithm that returns the sorted array
 ; algoritmo da função que retorna o array ordenado

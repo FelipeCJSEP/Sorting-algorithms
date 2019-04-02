@@ -35,7 +35,7 @@ end
 arr = {5, 2, -3, 10, 23, 99, -1, 7, 93, 0}
 arrSorted = cocktailShakerSort(arr)
 
-print("Array Sorted")
+print("Array Sorted:")
 
 for i = 1, #arrSorted do
 	print(arrSorted[i])

@@ -1,4 +1,4 @@
-# BUBBLE SORT IN RUBY
+# COCKTAIL SHAKER SORT IN RUBY
 
 # function algorithm that returns the sorted array
 # algoritmo da função que retorna o array ordenado

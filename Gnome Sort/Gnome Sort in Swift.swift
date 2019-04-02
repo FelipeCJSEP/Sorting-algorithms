@@ -1,30 +1,23 @@
-// BUBBLE SORT IN SWIFT
+// GNOME SORT IN SWIFT
 
 import Foundation
 
 // function algorithm that returns the sorted array
 // algoritmo da função que retorna o array ordenado
-func bubbleSort(arr: [Int]) -> [Int]
+func gnomeSort(arr: [Int]) -> [Int]
 {
 	var arrSorted: [Int] = arr
-	var n: Int = arr.count
-	var swapped: Bool
 
-	repeat
+	for i in 1...arrSorted.count - 1
 	{
-		swapped = false
-		n -= 1
+		var j = i
 
-		for i in 0...n - 1
+		while (j > 0 && arrSorted[j] < arrSorted[j - 1])
 		{
-			if arrSorted[i] > arrSorted[i + 1]
-			{
-				(arrSorted[i], arrSorted[i + 1]) = (arrSorted[i + 1], arrSorted[i])
-				swapped = true
-			}
+			(arrSorted[j], arrSorted[j - 1]) = (arrSorted[j - 1], arrSorted[j])
+			j -= 1
 		}
 	}
-	while swapped == true
 
 	return arrSorted
 }
@@ -32,7 +25,7 @@ func bubbleSort(arr: [Int]) -> [Int]
 // code only to call and test the sort function
 // código apenas para chamar e testar a função de ordenação
 let arr: [Int] = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0]
-let arrSorted: [Int] = bubbleSort(arr: arr)
+let arrSorted: [Int] = gnomeSort(arr: arr)
 
 print("Array Sorted:")
 

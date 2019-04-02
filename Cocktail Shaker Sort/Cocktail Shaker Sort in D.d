@@ -1,4 +1,4 @@
-// COCKTAIL SORT IN D
+// COCKTAIL SHAKER SORT IN D
 
 import std.stdio;
 

@@ -1,28 +1,17 @@
-// BUBBLE SORT IN RUST
+// GNOME SORT IN RUST
 
 // function algorithm that returns the sorted array
 // algoritmo da função que retorna o array ordenado
-fn bubble_sort(mut _arr: Vec<i32>) -> Vec<i32>
+fn gnome_sort(mut _arr: Vec<i32>) -> Vec<i32>
 {
-	let mut n = _arr.iter().count();
-
-	loop
+	for i in 1.._arr.iter().count()
 	{
-		let mut swapped = false;
-		n -= 1;
+		let mut j = i;
 
-		for i in 0..n
+		while j > 0 && _arr[j] < _arr[j - 1]
 		{
-			if _arr[i] > _arr[i + 1]
-			{
-				_arr.swap(i, i + 1);
-				swapped = true;
-			}
-		}
-
-		if !swapped
-		{
-			break;
+			_arr.swap(j, j - 1);
+			j -= 1;
 		}
 	}
 
@@ -34,7 +23,7 @@ fn bubble_sort(mut _arr: Vec<i32>) -> Vec<i32>
 fn main()
 {
 	let arr: Vec<i32> = vec![5, 2, -3, 10, 23, 99, -1, 7, 93, 0];
-	let arr_sorted: Vec<i32> = bubble_sort(arr);
+	let arr_sorted: Vec<i32> = gnome_sort(arr);
 	
 	println!("Array Sorted:");
 

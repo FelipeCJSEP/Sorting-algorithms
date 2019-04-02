@@ -6,7 +6,7 @@ function css = cocktailShakerSort(arr)
 	beginIndex = 1;
 	endIndex = length(arr);
 
-	while (true)
+	while true
 		swapped = false;
 		endIndex--;
 
@@ -17,7 +17,7 @@ function css = cocktailShakerSort(arr)
 			end
 		end
 
-		if (swapped)
+		if swapped
 			swapped = false;
 			beginIndex++;
 
@@ -29,7 +29,7 @@ function css = cocktailShakerSort(arr)
 			end
 		end
 
-		if (!swapped)
+		if !swapped
 			break;
 		end
 	end

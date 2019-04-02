@@ -1,4 +1,4 @@
-// COCKTAIL SHAKER SORT IN C
+// COCKTAIL SHAKER SORT IN C++
 
 #include <iostream>
 using namespace std;

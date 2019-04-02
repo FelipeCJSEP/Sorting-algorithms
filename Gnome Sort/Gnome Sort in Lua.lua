@@ -1,21 +1,16 @@
--- BUBBLE SORT IN LUA
+-- GNOME SORT IN LUA
 
 -- function algorithm that returns the sorted array
 -- algoritmo da função que retorna o array ordenado
-function bubbleSort(arr)
-	n = #arr
-	
-	repeat
-		swapped = false
-		n = n - 1
-
-		for i = 1, n do
-			if (arr[i] > arr[i + 1]) then
-				arr[i], arr[i + 1] = arr[i + 1], arr[i]
-				swapped = true
-			end
+function gnomeSort(arr)
+	for i = 2, #arr do
+		j = i
+		
+		while j > 1 and arr[j] < arr[j - 1] do
+			arr[j], arr[j - 1] = arr[j - 1], arr[j]
+			j = j - 1
 		end
-	until swapped == false
+	end
 
 	return arr
 end
@@ -23,7 +18,7 @@ end
 -- code only to call and test the sort function
 -- código apenas para chamar e testar a função de ordenação
 arr = {5, 2, -3, 10, 23, 99, -1, 7, 93, 0}
-arrSorted = bubbleSort(arr)
+arrSorted = gnomeSort(arr)
 
 print("Array Sorted:")
 

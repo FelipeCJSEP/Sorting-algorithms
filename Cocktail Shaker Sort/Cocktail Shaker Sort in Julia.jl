@@ -1,4 +1,4 @@
-# COCKTAIL SORT IN JULIA
+# COCKTAIL SHAKER SORT IN JULIA
 
 # function algorithm that returns the sorted array
 # algoritmo da função que retorna o array ordenado

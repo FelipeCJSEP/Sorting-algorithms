@@ -50,7 +50,7 @@ func cocktailShakerSort(arr: [Int]) -> [Int]
 let arr: [Int] = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0]
 let arrSorted: [Int] = cocktailShakerSort(arr: arr)
 
-print("Array Sorted")
+print("Array Sorted:")
 
 for a in arrSorted
 {
