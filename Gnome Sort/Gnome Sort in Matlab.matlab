@@ -18,7 +18,7 @@ end
 % code only to call and test the sort function
 % código apenas para chamar e testar a função de ordenação
 arr = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0];
-arrSorted = gnomeSort(arr)
+arrSorted = gnomeSort(arr);
 
 disp("Array Sorted:");
 
