@@ -1,42 +1,32 @@
-# COCKTAIL SHAKER SORT IN R
+# ODD-EVEN SORT IN R
 
 # function algorithm that returns the sorted array
 # algoritmo da função que retorna o array ordenado
-cocktailShakerSort <- function(arr)
+oddEvenSort <- function(arr)
 {
-	beginIndex <- 1
-	endIndex <- length(arr)
-
 	repeat
 	{
 		swapped <- FALSE
-		endIndex <- endIndex - 1
 
-		for (i in beginIndex: endIndex)
+		for (i in seq(1, length(arr) - 1, 2))
 		{
 			if (arr[i] > arr[i + 1])
 			{
 				swap <- arr[i]
 				arr[i] <- arr[i + 1]
 				arr[i + 1] <- swap
-				swapped <- TRUE
+				swapped = TRUE
 			}
 		}
 
-		if (swapped)
+		for (i in seq(2, length(arr) - 1, 2))
 		{
-			swapped <- FALSE
-			beginIndex <- beginIndex + 1
-
-			for (i in endIndex: beginIndex)
+			if (arr[i] > arr[i + 1])
 			{
-				if (arr[i] < arr[i - 1])
-				{
-					swap <- arr[i]
-					arr[i] <- arr[i - 1]
-					arr[i - 1] <- swap
-					swapped <- TRUE
-				}
+				swap <- arr[i]
+				arr[i] <- arr[i + 1]
+				arr[i + 1] <- swap
+				swapped = TRUE
 			}
 		}
 
@@ -50,7 +40,7 @@ cocktailShakerSort <- function(arr)
 # code only to call and test the sort function
 # código apenas para chamar e testar a função de ordenação
 arr <- c(5, 2, -3, 10, 23, 99, -1, 7, 93, 0)
-arrSorted <- cocktailShakerSort(arr)
+arrSorted <- oddEvenSort(arr)
 print("Array Sorted:")
 
 for (i in 1: length(arrSorted))

@@ -1,4 +1,4 @@
-// COCKTAIL SHAKER SORT IN PASCAL
+// ODD-EVEN SORT IN PASCAL
 
 program Cocktail_Shaker_Sort;
 
@@ -7,19 +7,16 @@ type
 
 // function algorithm that returns the sorted array
 // algoritmo da função que retorna o array ordenado
-function cocktailShakerSort(arr: arrayOfInteger): arrayOfInteger; // arrayOfInteger was set in "type" // arrayOfInteger foi definido em "type"
+function oddEvenSort(arr: arrayOfInteger): arrayOfInteger; // arrayOfInteger was set in "type" // arrayOfInteger foi definido em "type"
 var
-	i, beginIndex, endIndex, swap: integer;
+	i, swap: integer;
 	swapped: boolean;
 begin
-	beginIndex := 0;
-	endIndex := length(arr);
-
 	repeat
 		swapped := false;
-		endIndex := endIndex - 1;
+		i := 0;
 
-		for i := beginIndex to endIndex - 1 do
+		while i < length(arr) - 1 do
 		begin
 			if arr[i] > arr[i + 1] then
 			begin
@@ -28,27 +25,27 @@ begin
 				arr[i + 1] := swap;
 				swapped := true;
 			end;
+
+			i := i + 2;
 		end;
 
-		if swapped then
-		begin
-			swapped := false;
-			beginIndex := beginIndex + 1;
+		i := 1;
 
-			for i := endIndex - 1 downto beginIndex do
+		while i < length(arr) - 1 do
+		begin
+			if arr[i] > arr[i + 1] then
 			begin
-				if arr[i] < arr[i - 1] then
-				begin
-					swap := arr[i];
-					arr[i] := arr[i - 1];
-					arr[i - 1] := swap;
-					swapped := true;
-				end;
+				swap := arr[i];
+				arr[i] := arr[i + 1];
+				arr[i + 1] := swap;
+				swapped := true;
 			end;
+
+			i := i + 2;
 		end;
 	until not swapped;
 
-	cocktailShakerSort := arr;
+	oddEvenSort := arr;
 end;
 
 // code only to call and test the sort function
@@ -58,7 +55,7 @@ var
 	arrSorted: array of integer;
 	a: integer;
 begin
-	arrSorted := cocktailShakerSort(arr);
+	arrSorted := oddEvenSort(arr);
 
 	writeln('Array Sorted');
 

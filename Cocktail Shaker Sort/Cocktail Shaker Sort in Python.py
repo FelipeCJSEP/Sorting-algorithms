@@ -14,7 +14,7 @@ def cocktailShakerSort(arr):
 				arr[i], arr[i + 1] = arr[i + 1], arr[i]
 				swapped = True
 
-		if swapped == True:
+		if swapped:
 			swapped = False
 			beginIndex += 1
 
@@ -23,7 +23,7 @@ def cocktailShakerSort(arr):
 					arr[i], arr[i - 1] = arr[i - 1], arr[i]
 					swapped = True
 
-		if (swapped == False):
+		if not swapped:
 			break
 
 	return arr

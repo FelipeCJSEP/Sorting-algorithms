@@ -19,7 +19,7 @@ Module Bubble_Sort
 					swapped = true
 				End If
 			Next
-		Loop Until swapped = false
+		Loop Until Not swapped
 
 		Return arr
 	End Function

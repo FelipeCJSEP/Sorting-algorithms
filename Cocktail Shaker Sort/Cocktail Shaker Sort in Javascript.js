@@ -51,7 +51,7 @@ function cocktailShakerSort(arr)
 let arr = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0];
 let arrSorted = cocktailShakerSort(arr);
 
-print('Array Sorted:\n');
+print('Array Sorted:');
 
 for (let i in arrSorted)
 	print(arrSorted[i]);

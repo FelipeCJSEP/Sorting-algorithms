@@ -9,23 +9,23 @@ function cocktailShakerSort(arr)
 		swapped, endIndex = false, endIndex - 1
 
 		for i = beginIndex, endIndex do
-			if (arr[i] > arr[i + 1]) then
+			if arr[i] > arr[i + 1] then
 				arr[i], arr[i + 1] = arr[i + 1], arr[i]
 				swapped = true
 			end
 		end
 
-		if (swapped == true) then
+		if swapped then
 			swapped, beginIndex = false, beginIndex + 1
 
 			for i = endIndex, beginIndex, -1 do
-				if (arr[i] < arr[i - 1]) then
+				if arr[i] < arr[i - 1] then
 					arr[i], arr[i - 1] = arr[i - 1], arr[i]
 					swapped = true
 				end
 			end
 		end
-	until swapped == false
+	until not swapped
 
 	return arr
 end

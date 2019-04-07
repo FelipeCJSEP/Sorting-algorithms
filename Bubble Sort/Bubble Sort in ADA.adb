@@ -27,7 +27,7 @@ procedure Bubble_Sort is
 				end if;
 			end loop;
 
-			exit when swapped = false;
+			exit when not swapped;
 		end loop;
 
 		return arrSorted;

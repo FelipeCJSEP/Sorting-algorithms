@@ -5,6 +5,7 @@
 (defun gnomeSort(arr)
 	(loop for i from 0 to (- (array-total-size arr) 1) do
 		(setf j i)
+		
 		(loop while (and (> j 0) (< (aref arr j) (aref arr (- j 1)))) do
 			(setf swap (aref arr j))
 			(setf (aref arr j) (aref arr (- j 1)))

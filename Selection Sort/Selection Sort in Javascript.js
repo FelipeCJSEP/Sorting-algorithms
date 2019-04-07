@@ -1,29 +1,26 @@
-// BUBBLE SORT IN JAVASCRIPT
+// SELECTION SORT IN JAVASCRIPT
 
 // function algorithm that returns the sorted array
 // algoritmo da função que retorna o array ordenado
-function bubbleSort(arr)
+function selectionSort(arr)
 {
-	let n = arr.length;
-	let swapped;
-
-	do
+	for (let i = 0; i < arr.length - 1; i++)
 	{
-		swapped = false;
-		n--;
+		let smaller = i;
 
-		for (let i = 0; i < n; i++)
+		for (let j = i + 1; j < arr.length; j++)
 		{
-			if (arr[i] > arr[i + 1])
-			{
-				let swap = arr[i];
-				arr[i] = arr[i + 1];
-				arr[i + 1] = swap;
-				swapped = true;
-			}
+			if (arr[j] < arr[smaller])
+				smaller = j;
+		}
+
+		if (smaller > i)
+		{
+			const swap = arr[i];
+			arr[i] = arr[smaller];
+			arr[smaller] = swap;
 		}
 	}
-	while (swapped);
 
 	return arr;
 }
@@ -31,7 +28,7 @@ function bubbleSort(arr)
 // code only to call and test the sort function
 // código apenas para chamar e testar a função de ordenação
 let arr = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0];
-let arrSorted = bubbleSort(arr);
+let arrSorted = selectionSort(arr);
 
 print('Array Sorted:');
 

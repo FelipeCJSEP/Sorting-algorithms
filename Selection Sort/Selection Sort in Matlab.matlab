@@ -2,32 +2,28 @@
 
 % function algorithm that returns the sorted array
 % algoritmo da função que retorna o array ordenado
-function bs = bubbleSort(arr)
-	n = length(arr);
-	
-	while (true)
-		swapped = false;
-		n--;
+function ss = selectionSort(arr)
+	for i = 1: length(arr) - 1
+		smaller = i;
 
-		for i = 1: n
-			if arr(i) > arr(i + 1)
-				arr([i i + 1]) = arr([i + 1 i]);
-				swapped = true;
+		for j = i + 1: length(arr)
+			if arr(j) < arr(smaller)
+				smaller = j;
 			end
 		end
 
-		if (!swapped)
-			break;
+		if smaller > i
+			arr([i smaller]) = arr([smaller i]);
 		end
 	end
-	
-	bs = arr;
+
+	ss = arr;
 end
 
 % code only to call and test the sort function
 % código apenas para chamar e testar a função de ordenação
 arr = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0];
-arrSorted = bubbleSort(arr);
+arrSorted = selectionSort(arr);
 
 disp("Array Sorted:");
 
