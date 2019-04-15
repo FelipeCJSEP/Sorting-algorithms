@@ -1,9 +1,9 @@
-' GNOME SORT IN VISUAL BASIC
+' INSERTION SORT IN VISUAL BASIC
 
 Module Cocktail_Shaker_Sort
 	' function algorithm that returns the sorted array
 	' algoritmo da função que retorna o array ordenado
-	Function gnomeSort(ByVal ParamArray arr As Integer()) As Integer()
+	Function insertionSort(ByVal ParamArray arr As Integer()) As Integer()
 		For i As Integer = 1 To arr.Length - 1
 			Dim j As Integer = i
 
@@ -26,7 +26,7 @@ Module Cocktail_Shaker_Sort
 	' função principal apenas para chamar e testar a função de ordenação
 	Sub Main()
 		Dim arr As Integer() = {5, 2, -3, 10, 23, 99, -1, 7, 93, 0}
-		Dim arrSorted As Integer() = gnomeSort(arr)
+		Dim arrSorted As Integer() = insertionSort(arr)
 
 		Console.WriteLine("Array Sorted:")
 

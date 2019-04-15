@@ -1,10 +1,10 @@
-// GNOME SORT IN SWIFT
+// INSERTION SORT IN SWIFT
 
 import Foundation
 
 // function algorithm that returns the sorted array
 // algoritmo da função que retorna o array ordenado
-func gnomeSort(arr: [Int]) -> [Int]
+func insertionSort(arr: [Int]) -> [Int]
 {
 	var arrSorted: [Int] = arr
 
@@ -25,7 +25,7 @@ func gnomeSort(arr: [Int]) -> [Int]
 // code only to call and test the sort function
 // código apenas para chamar e testar a função de ordenação
 let arr: [Int] = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0]
-let arrSorted: [Int] = gnomeSort(arr: arr)
+let arrSorted: [Int] = insertionSort(arr: arr)
 
 print("Array Sorted:")
 

@@ -1,22 +1,20 @@
-// GNOME SORT IN JAVASCRIPT
+// INSERTION SORT IN JAVASCRIPT
 
 // function algorithm that returns the sorted array
 // algoritmo da função que retorna o array ordenado
-function gnomeSort(arr)
+function insertionSort(arr)
 {
-	let i = 0;
-
-	while (i < arr.length)
+	for (let i = 1; i < arr.length; i++)
 	{
-		if (i > 0 && arr[i] < arr[i - 1])
+		let j = i;
+
+		while (j > 0 && arr[j] < arr[j - 1])
 		{
-			const swap = arr[i];
-			arr[i] = arr[i - 1];
-			arr[i - 1] = swap;
-			i--;
+			const swap = arr[j];
+			arr[j] = arr[j - 1];
+			arr[j - 1] = swap;
+			j--;
 		}
-		else
-			i++;
 	}
 
 	return arr;
@@ -25,7 +23,7 @@ function gnomeSort(arr)
 // code only to call and test the sort function
 // código apenas para chamar e testar a função de ordenação
 let arr = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0];
-let arrSorted = gnomeSort(arr);
+let arrSorted = insertionSort(arr);
 
 print('Array Sorted:');
 

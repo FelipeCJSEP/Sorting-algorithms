@@ -1,20 +1,18 @@
-// GNOME SORT IN GROOVY
+// INSERTION SORT IN GROOVY
 
 // function algorithm that returns the sorted array
 // algoritmo da função que retorna o array ordenado
-int[] gnomeSort(int[] arr)
+int[] insertionSort(int[] arr)
 {
-	int i = 0
-
-	while (i < arr.length)
+	for (int i = 1; i < arr.length; i++)
 	{
-		if (i > 0 && arr[i] < arr[i - 1])
+		int j = i
+
+		while (j > 0 && arr[j] < arr[j - 1])
 		{
-			arr.swap(i, i - 1)
-			i--
+			arr.swap(j, j - 1)
+			j--
 		}
-		else
-			i++
 	}
 
 	return arr
@@ -25,7 +23,7 @@ int[] gnomeSort(int[] arr)
 static void main(String[] args)
 {
 	int[] arr = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0]
-	int[] arrSorted = gnomeSort(arr)
+	int[] arrSorted = insertionSort(arr)
 
 	println("Array Sorted:")
 

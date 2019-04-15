@@ -1,16 +1,17 @@
-// GNOME SORT IN OBJECTIVE-C
+// INSERTION SORT IN C++
+
+#include <iostream>
+using namespace std;
 
 // function algorithm that returns the sorted array
 // algoritmo da função que retorna o array ordenado
-int * gnomeSort(int arr[], int arrLength)
+int * insertionSort(int arr[], int arrLength)
 {
-	int i;
-
-	for (i = 1; i < arrLength; i++)
+	for (int i = 1; i < arrLength; i++)
 	{
 		int j = i;
 
-		while (j > 0 && arr[j] < arr[j - 1])
+		while (j > 0 and arr[j] < arr[j - 1])
 		{
 			int swap = arr[j];
 			arr[j] = arr[j - 1];
@@ -24,19 +25,18 @@ int * gnomeSort(int arr[], int arrLength)
 
 // main function only to call and test the sort function
 // função principal apenas para chamar e testar a função de ordenação
-int main(int argc, const char * argv[])
+int main(void)
 {
 	int arr[10] = {5, 2, -3, 10, 23, 99, -1, 7, 93, 0};
 	int arrLength = sizeof(arr) / sizeof(arr[0]);
 	int *arrSorted;
-	int i;
 
-	arrSorted = gnomeSort(arr, arrLength);
+	arrSorted = insertionSort(arr, arrLength);
 
-	printf("Array Sorted:\n");
+	cout << "Array Sorted:" << endl;
 
-	for (i = 0; i < arrLength; i++)
-		printf("%d\n", arrSorted[i]);
+	for (int i = 0; i < arrLength; i++)
+		cout << arrSorted[i] << endl;
 
 	return 0;
 }

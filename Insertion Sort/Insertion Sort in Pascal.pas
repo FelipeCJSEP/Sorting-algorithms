@@ -7,7 +7,7 @@ type
 
 // function algorithm that returns the sorted array
 // algoritmo da função que retorna o array ordenado
-function gnomeSort(arr: arrayOfInteger): arrayOfInteger; // arrayOfInteger was set in "type" // arrayOfInteger foi definido em "type"
+function insertionSort(arr: arrayOfInteger): arrayOfInteger; // arrayOfInteger was set in "type" // arrayOfInteger foi definido em "type"
 var
 	i, j, swap: integer;
 begin
@@ -24,7 +24,7 @@ begin
 		end;
 	end;
 
-	gnomeSort := arr;
+	insertionSort := arr;
 end;
 
 // code only to call and test the sort function
@@ -34,7 +34,7 @@ var
 	arrSorted: array of integer;
 	a: integer;
 begin
-	arrSorted := gnomeSort(arr);
+	arrSorted := insertionSort(arr);
 
 	writeln('Array Sorted');
 

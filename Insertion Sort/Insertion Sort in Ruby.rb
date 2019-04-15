@@ -1,8 +1,8 @@
-# GNOME SORT IN RUBY
+# INSERTION SORT IN RUBY
 
 # function algorithm that returns the sorted array
 # algoritmo da função que retorna o array ordenado
-def gnomeSort(arr)
+def insertionSort(arr)
 	for i in 1..arr.length - 1
 		j = i
 
@@ -18,7 +18,7 @@ end
 # code only to call and test the sort function
 # codigo apenas para chamar e testar a funcao de ordenacao
 arr = Array[5, 2, -3, 10, 23, 99, -1, 7, 93, 0]
-arrSorted = gnomeSort(arr)
+arrSorted = insertionSort(arr)
 
 puts "Array Sorted:\n"
 puts arrSorted;

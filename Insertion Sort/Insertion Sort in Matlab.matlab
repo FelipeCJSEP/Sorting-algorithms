@@ -1,8 +1,8 @@
-% GNOME SORT IN MATLAB
+% INSERTION SORT IN MATLAB
 
 % function algorithm that returns the sorted array
 % algoritmo da função que retorna o array ordenado
-function gs = gnomeSort(arr)
+function gs = insertionSort(arr)
 	for i = 2: length(arr)
 		j = i;
 
@@ -18,7 +18,7 @@ end
 % code only to call and test the sort function
 % código apenas para chamar e testar a função de ordenação
 arr = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0];
-arrSorted = gnomeSort(arr);
+arrSorted = insertionSort(arr);
 
 disp("Array Sorted:");
 

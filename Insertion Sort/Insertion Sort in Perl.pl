@@ -1,8 +1,8 @@
-# GNOME SORT IN PERL
+# INSERTION SORT IN PERL
 
 # function algorithm that returns the sorted array
 # algoritmo da funcao que retorna o array ordenado
-sub gnomeSort
+sub insertionSort
 {
 	@arr = @_;
 
@@ -23,7 +23,7 @@ sub gnomeSort
 # code only to call and test the sort function
 # código apenas para chamar e testar a função de ordenação
 @arr = (5, 2, -3, 10, 23, 99, -1, 7, 93, 0);
-@arrSorted = gnomeSort @arr;
+@arrSorted = insertionSort @arr;
 
 print "Array Sorted:\n";
 

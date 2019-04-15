@@ -1,28 +1,26 @@
-// GNOME SORT IN C#
+// INSERTION SORT IN C#
 
 using System;
 
-namespace Gnome_Sort
+namespace Insertion_Sort
 {
 	class Program
 	{
 		// function algorithm that returns the sorted array
 		// algoritmo da função que retorna o array ordenado
-		static int[] gnomeSort(int[] arr)
+		static int[] insertionSort(int[] arr)
 		{
-			int i = 0;
-
-			while (i < arr.Length)
+			for (int i = 1; i < arr.Length; i++)
 			{
-				if (i > 0 && arr[i] < arr[i - 1])
+				int j = i;
+
+				while (j > 0 && arr[j] < arr[j - 1])
 				{
-					int swap = arr[i];
-					arr[i] = arr[i - 1];
-					arr[i - 1] = swap;
-					i--;
+					int swap = arr[j];
+					arr[j] = arr[j - 1];
+					arr[j - 1] = swap;
+					j--;
 				}
-				else
-					i++;
 			}
 
 			return arr;
@@ -33,7 +31,7 @@ namespace Gnome_Sort
         public static void Main(string[] args)
         {
             int[] arr = {5, 2, -3, 10, 23, 99, -1, 7, 93, 0};
-			int[] arrSorted = gnomeSort(arr);
+			int[] arrSorted = insertionSort(arr);
 
 			Console.WriteLine("Array Sorted:");
 

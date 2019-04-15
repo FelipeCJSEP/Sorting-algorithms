@@ -1,22 +1,20 @@
-// GNOME SORT IN KOTLIN
+// INSERTION SORT IN KOTLIN
 
 // function algorithm that returns the sorted array
 // algoritmo da função que retorna o array ordenado
-fun gnomeSort(arr: IntArray): IntArray
+fun insertionSort(arr: IntArray): IntArray
 {
-	var i: Int = 0
-
-	while (i < arr.size)
+	for (i: Int in 0..arr.size - 1)
 	{
-		if (i > 0 && arr[i] < arr[i - 1])
+		var j: Int = i
+
+		while (j > 0 && arr[j] < arr[j - 1])
 		{
-			val swap: Int = arr[i]
-			arr[i] = arr[i - 1]
-			arr[i - 1] = swap
-			i--
+			val swap: Int = arr[j]
+			arr[j] = arr[j - 1]
+			arr[j - 1] = swap
+			j--
 		}
-		else
-			i++
 	}
 
 	return arr
@@ -27,7 +25,7 @@ fun gnomeSort(arr: IntArray): IntArray
 fun main()
 {
 	val arr: IntArray = intArrayOf(5, 2, -3, 10, 23, 99, -1, 7, 93, 0)
-	val arrSorted: IntArray = gnomeSort(arr)
+	val arrSorted: IntArray = insertionSort(arr)
 
 	println("Array Sorted:")
 

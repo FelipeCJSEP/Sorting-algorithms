@@ -1,24 +1,22 @@
-// GNOME SORT IN D
+// INSERTION SORT IN D
 
 import std.stdio;
 
 // function algorithm that returns the sorted array
 // algoritmo da função que retorna o array ordenado
-int[] gnomeSort(int[] arr)
+int[] insertionSort(int[] arr)
 {
-	int i = 0;
-
-	while (i < arr.length)
+	for (int i = 1; i < arr.length; i++)
 	{
-		if (i > 0 && arr[i] < arr[i - 1])
+		int j = i;
+
+		while (j > 0 && arr[j] < arr[j - 1])
 		{
-			int swap = arr[i];
-			arr[i] = arr[i - 1];
-			arr[i - 1] = swap;
-			i--;
+			int swap = arr[j];
+			arr[j] = arr[j - 1];
+			arr[j - 1] = swap;
+			j--;
 		}
-		else
-			i++;
 	}
 
 	return arr;
@@ -29,7 +27,7 @@ int[] gnomeSort(int[] arr)
 void main(string[] args)
 {
 	int[] arr = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0];
-	int[] arrSorted = gnomeSort(arr);
+	int[] arrSorted = insertionSort(arr);
 
 	writeln("Array Sorted:");
 

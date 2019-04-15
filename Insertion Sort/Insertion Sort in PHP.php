@@ -1,9 +1,9 @@
 <?php 
-// GNOME SORT IN PHP
+// INSERTION SORT IN PHP
 
 // function algorithm that returns the sorted array
 // algoritmo da função que retorna o array ordenado
-function gnomeSort($arr)
+function insertionSort($arr)
 {
 	for ($i = 1; $i < count($arr); $i++)
 	{
@@ -24,7 +24,7 @@ function gnomeSort($arr)
 // code only to call and test the sort function
 // código apenas para chamar e testar a função de ordenação
 $arr = array(5, 2, -3, 10, 23, 99, -1, 7, 93, 0);
-$arrSorted = gnomeSort($arr);
+$arrSorted = insertionSort($arr);
 
 echo "Array Sorted:\n";
 

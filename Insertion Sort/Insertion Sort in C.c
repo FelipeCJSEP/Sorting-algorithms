@@ -1,25 +1,22 @@
-// GNOME SORT IN C++
+// INSERTION SORT SHAKER SORT IN C
 
-#include <iostream>
-using namespace std;
+#include <stdio.h>
 
 // function algorithm that returns the sorted array
 // algoritmo da função que retorna o array ordenado
-int * gnomeSort(int arr[], int arrLength)
+int * insertionSort(int arr[], int arrLength)
 {
-	int i = 0;
-
-	while (i < arrLength)
+	for (int i = 1; i < arrLength; i++)
 	{
-		if (i > 0 and arr[i] < arr[i - 1])
+		int j = i;
+
+		while (j > 0 && arr[j] < arr[j - 1])
 		{
-			int swap = arr[i];
-			arr[i] = arr[i - 1];
-			arr[i - 1] = swap;
-			i--;
+			int swap = arr[j];
+			arr[j] = arr[j - 1];
+			arr[j - 1] = swap;
+			j--;
 		}
-		else
-			i++;
 	}
 
 	return arr;
@@ -33,12 +30,12 @@ int main(void)
 	int arrLength = sizeof(arr) / sizeof(arr[0]);
 	int *arrSorted;
 
-	arrSorted = gnomeSort(arr, arrLength);
+	arrSorted = insertionSort(arr, arrLength);
 
-	cout << "Array Sorted:" << endl;
+	printf("Array Sorted:\n");
 
 	for (int i = 0; i < arrLength; i++)
-		cout << arrSorted[i] << endl;
+		printf("%d\n", arrSorted[i]);
 
-	return 0;
+	return (0);
 }

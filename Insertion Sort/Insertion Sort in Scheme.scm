@@ -1,8 +1,8 @@
-; GNOME SORT IN SCHEME
+; INSERTION SORT IN SCHEME
 
 ; function algorithm that returns the sorted array
 ; algoritmo da função que retorna o array ordenado
-(define gnomeSort (lambda (arr)
+(define insertionSort (lambda (arr)
 	(define j 0)
 	(define swap 0)
 
@@ -25,7 +25,7 @@
 ; code only to call and test the sort function
 ; código apenas para chamar e testar a função de ordenação
 (define arr (vector 5 2 -3 10 23 99 -1 7 93 0))
-(define arrSorted (gnomeSort arr))
+(define arrSorted (insertionSort arr))
 
 (print "Array Sorted")
 

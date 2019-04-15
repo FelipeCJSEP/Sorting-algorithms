@@ -1,10 +1,10 @@
-// GNOME SORT IN SCALA
+// INSERTION SORT IN SCALA
 
 object Cocktail_Shaker_Sort
 {
 	// function algorithm that returns the sorted array
 	// algoritmo da função que retorna o array ordenado
-	def gnomeSort(arr: Array[Int]): Array[Int] = {
+	def insertionSort(arr: Array[Int]): Array[Int] = {
 		for (i <- 1 to arr.length - 1)
 		{
 			var j = i
@@ -26,7 +26,7 @@ object Cocktail_Shaker_Sort
     def main(args: Array[String])
     {
     	val arr = Array[Int](5, 2, -3, 10, 23, 99, -1, 7, 93, 0)
-    	val arrSorted = gnomeSort(arr)
+    	val arrSorted = insertionSort(arr)
 
     	println("Array Sorted:")
 

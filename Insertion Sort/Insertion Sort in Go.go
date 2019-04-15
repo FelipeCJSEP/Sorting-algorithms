@@ -1,18 +1,16 @@
-// GNOME SORT IN GO
+// INSERTION SORT IN GO
 
 package main
 
 // function algorithm that returns the sorted array
 // algoritmo da função que retorna o array ordenado
-func gnomeSort(arr []int) []int {
-	var i = 0
+func insertionSort(arr []int) []int {
+	for i := 1; i < len(arr); i++ {
+		var j = i
 
-	for (i < len(arr)) {
-		if (i > 0 && arr[i] < arr[i - 1]) {
-			arr[i], arr[i - 1] = arr[i - 1], arr[i]
-			i--
-		} else {
-			i++
+		for (j > 0 && arr[j] < arr[j - 1]) {
+			arr[j], arr[j - 1] = arr[j - 1], arr[j]
+			j--
 		}
 	}
 
@@ -23,7 +21,7 @@ func gnomeSort(arr []int) []int {
 // função principal apenas para chamar e testar a função de ordenação
 func main() {
 	var arr = []int {5, 2, -3, 10, 23, 99, -1, 7, 93, 0};
-	var arrSorted []int = gnomeSort(arr)
+	var arrSorted []int = insertionSort(arr)
 
 	println("Array Sorted:")
 

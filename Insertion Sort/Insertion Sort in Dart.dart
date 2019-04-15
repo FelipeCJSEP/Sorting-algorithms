@@ -1,22 +1,20 @@
-// GNOME SORT IN DART
+// INSERTION SORT IN DART
 
 // function algorithm that returns the sorted array
 // algoritmo da função que retorna o array ordenado
-List<int> gnomeSort(arr)
+List<int> insertionSort(arr)
 {
-	int i = 0;
-
-	while (i < arr.length)
+	for (int i = 1; i < arr.length; i++)
 	{
-		if (i > 0 && arr[i] < arr[i - 1])
+		int j = i;
+
+		while (j > 0 && arr[j] < arr[j - 1])
 		{
-			int swap = arr[i];
-			arr[i] = arr[i - 1];
-			arr[i - 1] = swap;
-			i--;
+			int swap = arr[j];
+			arr[j] = arr[j - 1];
+			arr[j - 1] = swap;
+			j--;
 		}
-		else
-			i++;
 	}
 
 	return arr;
@@ -27,7 +25,7 @@ List<int> gnomeSort(arr)
 void main()
 {
 	List<int> arr = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0];
-	List<int> arrSorted = gnomeSort(arr);
+	List<int> arrSorted = insertionSort(arr);
 
 	print("Array Sorted:");
 

@@ -1,8 +1,8 @@
-# GNOME SORT SORT IN R
+# INSERTION SORT SORT IN R
 
 # function algorithm that returns the sorted array
 # algoritmo da função que retorna o array ordenado
-gnomeSort <- function(arr)
+insertionSort <- function(arr)
 {
 	for (i in 2: length(arr))
 	{
@@ -23,7 +23,7 @@ gnomeSort <- function(arr)
 # code only to call and test the sort function
 # código apenas para chamar e testar a função de ordenação
 arr <- c(5, 2, -3, 10, 23, 99, -1, 7, 93, 0)
-arrSorted <- gnomeSort(arr)
+arrSorted <- insertionSort(arr)
 print("Array Sorted:")
 
 for (i in 1: length(arrSorted))
