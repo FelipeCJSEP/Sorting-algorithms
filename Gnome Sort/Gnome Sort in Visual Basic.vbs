@@ -1,23 +1,25 @@
-' INSERTION SORT IN VISUAL BASIC
+' GNOME SORT IN VISUAL BASIC
 
-Module Insertion_Sort
+Module Gnome_Sort
 	' function algorithm that returns the sorted array
 	' algoritmo da função que retorna o array ordenado
-	Function insertionSort(ByVal ParamArray arr As Integer()) As Integer()
-		For i As Integer = 1 To arr.Length - 1
-			Dim j As Integer = i
+	Function gnomeSort(ByVal ParamArray arr As Integer()) As Integer()
+		Dim i As Integer = 0
 
-			While j > 0
-				If arr(j) < arr(j - 1)
-					Dim swap As Integer = arr(j)
-					arr(j) = arr(j - 1)
-					arr(j - 1) = swap
-					j -= 1
+		While i < arr.Length
+			If i > 0
+				If arr(i) < arr(i - 1)
+					Dim swap As Integer = arr(i)
+					arr(i) = arr(i - 1)
+					arr(i - 1) = swap
+					i -= 1
 				Else
-					j = 0
+					i += 1
 				End If
-			End While
-		Next
+			Else
+				i += 1
+			End If
+		End While
 
 		Return arr
 	End Function
@@ -26,7 +28,7 @@ Module Insertion_Sort
 	' função principal apenas para chamar e testar a função de ordenação
 	Sub Main()
 		Dim arr As Integer() = {5, 2, -3, 10, 23, 99, -1, 7, 93, 0}
-		Dim arrSorted As Integer() = insertionSort(arr)
+		Dim arrSorted As Integer() = gnomeSort(arr)
 
 		Console.WriteLine("Array Sorted:")
 
