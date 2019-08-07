@@ -27,10 +27,10 @@ fun gnomeSort(arr: IntArray): IntArray
 fun main()
 {
 	val arr: IntArray = intArrayOf(5, 2, -3, 10, 23, 99, -1, 7, 93, 0)
-	val arrSorted: IntArray = gnomeSort(arr)
+	val sortedArr: IntArray = gnomeSort(arr)
 
-	println("Array Sorted:")
+	println("Sorted Array:")
 
-	for (a: Int in arrSorted)
+	for (a: Int in sortedArr)
 		println(a)
 }

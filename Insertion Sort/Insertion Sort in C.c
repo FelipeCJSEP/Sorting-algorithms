@@ -28,14 +28,14 @@ int main(void)
 {
 	int arr[10] = {5, 2, -3, 10, 23, 99, -1, 7, 93, 0};
 	int arrLength = sizeof(arr) / sizeof(arr[0]);
-	int *arrSorted;
+	int *sortedArr;
 
-	arrSorted = insertionSort(arr, arrLength);
+	sortedArr = insertionSort(arr, arrLength);
 
-	printf("Array Sorted:\n");
+	printf("Sorted Array:\n");
 
 	for (int i = 0; i < arrLength; i++)
-		printf("%d\n", arrSorted[i]);
+		printf("%d\n", sortedArr[i]);
 
 	return (0);
 }

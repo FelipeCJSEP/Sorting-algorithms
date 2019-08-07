@@ -34,11 +34,11 @@ object Bubble_Sort
     def main(args: Array[String])
     {
     	val arr = Array[Int](5, 2, -3, 10, 23, 99, -1, 7, 93, 0)
-    	val arrSorted = bubbleSort(arr)
+    	val sortedArr = bubbleSort(arr)
 
-    	println("Array Sorted:")
+    	println("Sorted Array:")
 
-    	for (a <- arrSorted)
+    	for (a <- sortedArr)
     		println(a)
     }
 }

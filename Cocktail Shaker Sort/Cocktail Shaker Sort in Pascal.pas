@@ -55,13 +55,13 @@ end;
 // código apenas para chamar e testar a função de ordenação
 var
 	arr: array[0..9] of integer = (5, 2, -3, 10, 23, 99, -1, 7, 93, 0);
-	arrSorted: array of integer;
+	sortedArr: array of integer;
 	a: integer;
 begin
-	arrSorted := cocktailShakerSort(arr);
+	sortedArr := cocktailShakerSort(arr);
 
-	writeln('Array Sorted');
+	writeln('Sorted Array');
 
-	for a in arrSorted do
+	for a in sortedArr do
 		writeln(a);
 end.

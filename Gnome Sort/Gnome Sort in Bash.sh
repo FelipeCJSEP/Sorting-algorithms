@@ -27,11 +27,11 @@ gnomeSort()
 # code only to call and test the sort function
 # código apenas para chamar e testar a função de ordenação
 arr=(5 2 -3 10 23 99 -1 7 93 0)
-arrSorted=(`echo $(gnomeSort ${arr[@]})`)
+sortedArr=(`echo $(gnomeSort ${arr[@]})`)
 
-echo "Array Sorted"
+echo "Sorted Array"
 
-for a in ${arrSorted[@]};
+for a in ${sortedArr[@]};
 do
 	echo $a
 done

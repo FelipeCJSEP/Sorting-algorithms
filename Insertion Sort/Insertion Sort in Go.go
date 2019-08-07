@@ -21,11 +21,11 @@ func insertionSort(arr []int) []int {
 // função principal apenas para chamar e testar a função de ordenação
 func main() {
 	var arr = []int {5, 2, -3, 10, 23, 99, -1, 7, 93, 0};
-	var arrSorted []int = insertionSort(arr)
+	var sortedArr []int = insertionSort(arr)
 
-	println("Array Sorted:")
+	println("Sorted Array:")
 
-	for _, a := range arrSorted {
+	for _, a := range sortedArr {
 		println(a)
 	}
 }

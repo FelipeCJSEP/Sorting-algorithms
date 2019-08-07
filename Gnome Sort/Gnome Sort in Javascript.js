@@ -25,9 +25,9 @@ function gnomeSort(arr)
 // code only to call and test the sort function
 // código apenas para chamar e testar a função de ordenação
 let arr = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0];
-let arrSorted = gnomeSort(arr);
+let sortedArr = gnomeSort(arr);
 
-print('Array Sorted:');
+print('Sorted Array:');
 
-for (let i in arrSorted)
-	print(arrSorted[i]);
+for (let i in sortedArr)
+	print(sortedArr[i]);

@@ -27,10 +27,10 @@ int[] insertionSort(int[] arr)
 void main(string[] args)
 {
 	int[] arr = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0];
-	int[] arrSorted = insertionSort(arr);
+	int[] sortedArr = insertionSort(arr);
 
-	writeln("Array Sorted:");
+	writeln("Sorted Array:");
 
-	foreach (a; arrSorted)
+	foreach (a; sortedArr)
 		writeln(a);
 }

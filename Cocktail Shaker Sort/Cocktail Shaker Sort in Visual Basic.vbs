@@ -43,11 +43,11 @@ Module Cocktail_Shaker_Sort
 	' função principal apenas para chamar e testar a função de ordenação
 	Sub Main()
 		Dim arr As Integer() = {5, 2, -3, 10, 23, 99, -1, 7, 93, 0}
-		Dim arrSorted As Integer() = cocktailShakerSort(arr)
+		Dim sortedArr As Integer() = cocktailShakerSort(arr)
 
-		Console.WriteLine("Array Sorted:")
+		Console.WriteLine("Sorted Array:")
 
-		For Each a As Integer In arrSorted
+		For Each a As Integer In sortedArr
 			Console.WriteLine(a)
 		Next
 	End Sub

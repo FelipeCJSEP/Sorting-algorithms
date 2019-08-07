@@ -42,10 +42,10 @@ List<int> oddEvenSort(arr)
 void main()
 {
 	List<int> arr = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0];
-	List<int> arrSorted = oddEvenSort(arr);
+	List<int> sortedArr = oddEvenSort(arr);
 
-	print("Array Sorted:");
+	print("Sorted Array:");
 
-	for (int a in arrSorted)
+	for (int a in sortedArr)
 		print(a);
 }

@@ -25,10 +25,10 @@ end
 # code only to call and test the sort function
 # código apenas para chamar e testar a função de ordenação
 arr = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0]
-arrSorted = bubbleSort(arr)
+sortedArr = bubbleSort(arr)
 
-println("Array Sorted:")
+println("Sorted Array:")
 
-for a in arrSorted
+for a in sortedArr
 	println(a)
 end

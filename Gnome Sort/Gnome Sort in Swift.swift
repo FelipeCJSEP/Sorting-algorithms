@@ -6,15 +6,15 @@ import Foundation
 // algoritmo da função que retorna o array ordenado
 func gnomeSort(arr: [Int]) -> [Int]
 {
-	var arrSorted: [Int] = arr
+	var sortedArr: [Int] = arr
 
 	var i = 0
 
-	while (i < arrSorted.count)
+	while (i < sortedArr.count)
 	{
-		if (i > 0 && arrSorted[i] < arrSorted[i - 1])
+		if (i > 0 && sortedArr[i] < sortedArr[i - 1])
 		{
-			(arrSorted[i], arrSorted[i - 1]) = (arrSorted[i - 1], arrSorted[i])
+			(sortedArr[i], sortedArr[i - 1]) = (sortedArr[i - 1], sortedArr[i])
 			i -= 1
 		}
 		else
@@ -23,17 +23,17 @@ func gnomeSort(arr: [Int]) -> [Int]
 		}
 	}
 
-	return arrSorted;
+	return sortedArr;
 }
 
 // code only to call and test the sort function
 // código apenas para chamar e testar a função de ordenação
 let arr: [Int] = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0]
-let arrSorted: [Int] = gnomeSort(arr: arr)
+let sortedArr: [Int] = gnomeSort(arr: arr)
 
-print("Array Sorted:")
+print("Sorted Array:")
 
-for a in arrSorted
+for a in sortedArr
 {
 	print(a)
 }

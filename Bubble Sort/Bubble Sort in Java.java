@@ -35,11 +35,11 @@ public class Bubble_Sort
 	public static void main(String[] args)
 	{
 		int[] arr = {5, 2, -3, 10, 23, 99, -1, 7, 93, 0};
-		int[] arrSorted = bubbleSort(arr);
+		int[] sortedArr = bubbleSort(arr);
 
-		System.out.println("Array Sorted:");
+		System.out.println("Sorted Array:");
 
-		for (int a: arrSorted)
+		for (int a: sortedArr)
 			System.out.println(a);
 	}
 }

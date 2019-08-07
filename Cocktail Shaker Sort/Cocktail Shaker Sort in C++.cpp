@@ -54,14 +54,14 @@ int main(void)
 {
 	int arr[10] = {5, 2, -3, 10, 23, 99, -1, 7, 93, 0};
 	int arrLength = sizeof(arr) / sizeof(arr[0]);
-	int *arrSorted;
+	int *sortedArr;
 
-	arrSorted = cocktailShakerSort(arr, arrLength);
+	sortedArr = cocktailShakerSort(arr, arrLength);
 
-	cout << "Array Sorted:" << endl;
+	cout << "Sorted Array:" << endl;
 
 	for (int i = 0; i < arrLength; i++)
-		cout << arrSorted[i] << endl;
+		cout << sortedArr[i] << endl;
 
 	return 0;
 }

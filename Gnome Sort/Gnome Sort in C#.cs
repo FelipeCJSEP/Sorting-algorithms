@@ -33,11 +33,11 @@ namespace Gnome_Sort
         public static void Main(string[] args)
         {
             int[] arr = {5, 2, -3, 10, 23, 99, -1, 7, 93, 0};
-			int[] arrSorted = gnomeSort(arr);
+			int[] sortedArr = gnomeSort(arr);
 
-			Console.WriteLine("Array Sorted:");
+			Console.WriteLine("Sorted Array:");
 
-			foreach (int a in arrSorted)
+			foreach (int a in sortedArr)
 				Console.WriteLine(a);
         }
 	}

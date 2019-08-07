@@ -6,44 +6,44 @@ import Foundation
 // algoritmo da função que retorna o array ordenado
 func oddEvenSort(arr: [Int]) -> [Int]
 {
-	var arrSorted: [Int] = arr
+	var sortedArr: [Int] = arr
 	var swapped: Bool
 
 	repeat
 	{
 		swapped = false
 
-		for i in stride(from: 0, to: arrSorted.count - 1, by: 2)
+		for i in stride(from: 0, to: sortedArr.count - 1, by: 2)
 		{
-			if arrSorted[i] > arrSorted[i + 1]
+			if sortedArr[i] > sortedArr[i + 1]
 			{
-				(arrSorted[i], arrSorted[i + 1]) = (arrSorted[i + 1], arrSorted[i])
+				(sortedArr[i], sortedArr[i + 1]) = (sortedArr[i + 1], sortedArr[i])
 				swapped = true
 			}
 		}
 
-		for i in stride(from: 1, to: arrSorted.count - 1, by: 2)
+		for i in stride(from: 1, to: sortedArr.count - 1, by: 2)
 		{
-			if arrSorted[i] > arrSorted[i + 1]
+			if sortedArr[i] > sortedArr[i + 1]
 			{
-				(arrSorted[i], arrSorted[i + 1]) = (arrSorted[i + 1], arrSorted[i])
+				(sortedArr[i], sortedArr[i + 1]) = (sortedArr[i + 1], sortedArr[i])
 				swapped = true
 			}
 		}
 	}
 	while swapped
 
-	return arrSorted
+	return sortedArr
 }
 
 // code only to call and test the sort function
 // código apenas para chamar e testar a função de ordenação
 let arr: [Int] = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0]
-let arrSorted: [Int] = oddEvenSort(arr: arr)
+let sortedArr: [Int] = oddEvenSort(arr: arr)
 
-print("Array Sorted:")
+print("Sorted Array:")
 
-for a in arrSorted
+for a in sortedArr
 {
 	print(a)
 }

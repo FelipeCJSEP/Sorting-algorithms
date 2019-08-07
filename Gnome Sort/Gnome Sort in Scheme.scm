@@ -28,10 +28,10 @@
 ; code only to call and test the sort function
 ; código apenas para chamar e testar a função de ordenação
 (define arr (vector 5 2 -3 10 23 99 -1 7 93 0))
-(define arrSorted (gnomeSort arr))
+(define sortedArr (gnomeSort arr))
 
-(print "Array Sorted")
+(print "Sorted Array")
 
 (do ((i 0 (+ i 1))) ((= i (vector-length arr)) i)
-	(print (vector-ref arrSorted i))
+	(print (vector-ref sortedArr i))
 )

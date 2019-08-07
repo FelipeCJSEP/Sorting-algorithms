@@ -8,7 +8,7 @@ procedure Odd_Even_Sort is
 	-- function algorithm that returns the sorted array
 	-- algoritmo da função que retorna o array ordenado
 	function oddEvenSort(arr: arrayOfInteger) return arrayOfInteger is -- "arrayOfInteger" was set in "type" -- "arrayOfInteger" foi definido em "type"
-		arrSorted: arrayOfInteger := arr;
+		sortedArr: arrayOfInteger := arr;
 		swap, i: integer;
 		swapped: boolean;
 	begin
@@ -16,11 +16,11 @@ procedure Odd_Even_Sort is
 			swapped := false;
 			i := 0;
 
-			while i < arrSorted'Length - 1 loop
-				if arrSorted(i) > arrSorted(i + 1) then
-					swap := arrSorted(i);
-					arrSorted(i) := arrSorted(i + 1);
-					arrSorted(i + 1) := swap;
+			while i < sortedArr'Length - 1 loop
+				if sortedArr(i) > sortedArr(i + 1) then
+					swap := sortedArr(i);
+					sortedArr(i) := sortedArr(i + 1);
+					sortedArr(i + 1) := swap;
 					swapped := true;
 				end if;
 
@@ -29,11 +29,11 @@ procedure Odd_Even_Sort is
 
 			i := 1;
 
-			while i < arrSorted'Length - 1 loop
-				if arrSorted(i) > arrSorted(i + 1) then
-					swap := arrSorted(i);
-					arrSorted(i) := arrSorted(i + 1);
-					arrSorted(i + 1) := swap;
+			while i < sortedArr'Length - 1 loop
+				if sortedArr(i) > sortedArr(i + 1) then
+					swap := sortedArr(i);
+					sortedArr(i) := sortedArr(i + 1);
+					sortedArr(i + 1) := swap;
 					swapped := true;
 				end if;
 
@@ -43,17 +43,17 @@ procedure Odd_Even_Sort is
 			exit when not swapped;
 		end loop;
 
-		return arrSorted;
+		return sortedArr;
 	end oddEvenSort;
 
 -- code only to call and test the sort function
 -- código apenas para chamar e testar a função de ordenação
 	arr: arrayOfInteger(0..9) := (5, 2, -3, 10, 23, 99, -1, 7, 93, 0);
-	arrSorted: arrayOfInteger(0..9) := oddEvenSort(arr);
+	sortedArr: arrayOfInteger(0..9) := oddEvenSort(arr);
 begin
-	Put_Line("Array Sorted");
+	Put_Line("Sorted Array");
 
-	for i in arrSorted'Range loop
-		Put_Line(integer'Image(arrSorted(i)));
+	for i in sortedArr'Range loop
+		Put_Line(integer'Image(sortedArr(i)));
 	end loop;
 end Odd_Even_Sort;

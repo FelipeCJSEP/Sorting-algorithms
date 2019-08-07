@@ -30,10 +30,10 @@ List<int> selectionSort(arr)
 void main()
 {
 	List<int> arr = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0];
-	List<int> arrSorted = selectionSort(arr);
+	List<int> sortedArr = selectionSort(arr);
 
-	print("Array Sorted:");
+	print("Sorted Array:");
 
-	for (int a in arrSorted)
+	for (int a in sortedArr)
 		print(a);
 }

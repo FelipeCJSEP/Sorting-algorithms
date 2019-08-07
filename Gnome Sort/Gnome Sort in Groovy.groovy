@@ -25,10 +25,10 @@ int[] gnomeSort(int[] arr)
 static void main(String[] args)
 {
 	int[] arr = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0]
-	int[] arrSorted = gnomeSort(arr)
+	int[] sortedArr = gnomeSort(arr)
 
-	println("Array Sorted:")
+	println("Sorted Array:")
 
-	for (int a in arrSorted)
+	for (int a in sortedArr)
 		println(a)
 }

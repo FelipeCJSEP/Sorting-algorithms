@@ -23,10 +23,10 @@ end
 % code only to call and test the sort function
 % código apenas para chamar e testar a função de ordenação
 arr = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0];
-arrSorted = selectionSort(arr);
+sortedArr = selectionSort(arr);
 
-disp("Array Sorted:");
+disp("Sorted Array:");
 
-for i = 1: length(arrSorted)
-	disp(arrSorted(i));
+for i = 1: length(sortedArr)
+	disp(sortedArr(i));
 end

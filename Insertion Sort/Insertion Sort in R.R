@@ -23,8 +23,8 @@ insertionSort <- function(arr)
 # code only to call and test the sort function
 # código apenas para chamar e testar a função de ordenação
 arr <- c(5, 2, -3, 10, 23, 99, -1, 7, 93, 0)
-arrSorted <- insertionSort(arr)
-print("Array Sorted:")
+sortedArr <- insertionSort(arr)
+print("Sorted Array:")
 
-for (i in 1: length(arrSorted))
-	print(arrSorted[i])
+for (i in 1: length(sortedArr))
+	print(sortedArr[i])

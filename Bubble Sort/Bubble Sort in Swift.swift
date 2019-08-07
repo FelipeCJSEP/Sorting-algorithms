@@ -6,7 +6,7 @@ import Foundation
 // algoritmo da função que retorna o array ordenado
 func bubbleSort(arr: [Int]) -> [Int]
 {
-	var arrSorted: [Int] = arr
+	var sortedArr: [Int] = arr
 	var n: Int = arr.count
 	var swapped: Bool
 
@@ -17,26 +17,26 @@ func bubbleSort(arr: [Int]) -> [Int]
 
 		for i in 0...n - 1
 		{
-			if arrSorted[i] > arrSorted[i + 1]
+			if sortedArr[i] > sortedArr[i + 1]
 			{
-				(arrSorted[i], arrSorted[i + 1]) = (arrSorted[i + 1], arrSorted[i])
+				(sortedArr[i], sortedArr[i + 1]) = (sortedArr[i + 1], sortedArr[i])
 				swapped = true
 			}
 		}
 	}
 	while swapped == true
 
-	return arrSorted
+	return sortedArr
 }
 
 // code only to call and test the sort function
 // código apenas para chamar e testar a função de ordenação
 let arr: [Int] = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0]
-let arrSorted: [Int] = bubbleSort(arr: arr)
+let sortedArr: [Int] = bubbleSort(arr: arr)
 
-print("Array Sorted:")
+print("Sorted Array:")
 
-for a in arrSorted
+for a in sortedArr
 {
 	print(a)
 }

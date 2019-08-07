@@ -20,10 +20,10 @@
 ; code only to call and test the sort function
 ; código apenas para chamar e testar a função de ordenação
 (setf arr (make-array '(10) :initial-contents' (5 2 -3 10 23 99 -1 7 93 0)))
-(setf arrSorted (insertionSort arr))
+(setf sortedArr (insertionSort arr))
 
-(write-line "Array Sorted:")
+(write-line "Sorted Array:")
 
-(loop for i from 0 to (- (array-total-size arrSorted) 1) do
-	(print (aref arrSorted i))
+(loop for i from 0 to (- (array-total-size sortedArr) 1) do
+	(print (aref sortedArr i))
 )

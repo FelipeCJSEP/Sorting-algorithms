@@ -20,7 +20,7 @@ end
 # code only to call and test the sort function
 # codigo apenas para chamar e testar a funcao de ordenacao
 arr = Array[5, 2, -3, 10, 23, 99, -1, 7, 93, 0]
-arrSorted = gnomeSort(arr)
+sortedArr = gnomeSort(arr)
 
-puts "Array Sorted:\n"
-puts arrSorted;
+puts "Sorted Array:\n"
+puts sortedArr;

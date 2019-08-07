@@ -45,11 +45,11 @@ sub cocktailShakerSort
 # code only to call and test the sort function
 # código apenas para chamar e testar a função de ordenação
 @arr = (5, 2, -3, 10, 23, 99, -1, 7, 93, 0);
-@arrSorted = cocktailShakerSort @arr;
+@sortedArr = cocktailShakerSort @arr;
 
-print "Array Sorted:\n";
+print "Sorted Array:\n";
 
-foreach $a (@arrSorted)
+foreach $a (@sortedArr)
 {
 	print "$a\n";
 }

@@ -6,30 +6,30 @@ import Foundation
 // algoritmo da função que retorna o array ordenado
 func insertionSort(arr: [Int]) -> [Int]
 {
-	var arrSorted: [Int] = arr
+	var sortedArr: [Int] = arr
 
-	for i in 1...arrSorted.count - 1
+	for i in 1...sortedArr.count - 1
 	{
 		var j = i
 
-		while (j > 0 && arrSorted[j] < arrSorted[j - 1])
+		while (j > 0 && sortedArr[j] < sortedArr[j - 1])
 		{
-			(arrSorted[j], arrSorted[j - 1]) = (arrSorted[j - 1], arrSorted[j])
+			(sortedArr[j], sortedArr[j - 1]) = (sortedArr[j - 1], sortedArr[j])
 			j -= 1
 		}
 	}
 
-	return arrSorted
+	return sortedArr
 }
 
 // code only to call and test the sort function
 // código apenas para chamar e testar a função de ordenação
 let arr: [Int] = [5, 2, -3, 10, 23, 99, -1, 7, 93, 0]
-let arrSorted: [Int] = insertionSort(arr: arr)
+let sortedArr: [Int] = insertionSort(arr: arr)
 
-print("Array Sorted:")
+print("Sorted Array:")
 
-for a in arrSorted
+for a in sortedArr
 {
 	print(a)
 }

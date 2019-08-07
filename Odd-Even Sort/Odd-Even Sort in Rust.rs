@@ -42,7 +42,7 @@ fn main()
 	let arr: Vec<i32> = vec![5, 2, -3, 10, 23, 99, -1, 7, 93, 0];
 	let arr_sorted: Vec<i32> = odd_even_sort(arr);
 	
-	println!("Array Sorted:");
+	println!("Sorted Array:");
 
 	for a in arr_sorted
 	{

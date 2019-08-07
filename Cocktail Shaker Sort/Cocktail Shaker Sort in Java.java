@@ -52,11 +52,11 @@ public class Cocktail_Shaker_Sort
 	public static void main(String[] args)
 	{
 		int[] arr = {5, 2, -3, 10, 23, 99, -1, 7, 93, 0};
-		int[] arrSorted = cocktailShakerSort(arr);
+		int[] sortedArr = cocktailShakerSort(arr);
 
-		System.out.println("Array Sorted:");
+		System.out.println("Sorted Array:");
 
-		for (int a: arrSorted)
+		for (int a: sortedArr)
 			System.out.println(a);
 	}
 }

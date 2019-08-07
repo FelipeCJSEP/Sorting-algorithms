@@ -31,10 +31,10 @@ function bubbleSort($arr)
 // code only to call and test the sort function
 // código apenas para chamar e testar a função de ordenação
 $arr = array(5, 2, -3, 10, 23, 99, -1, 7, 93, 0);
-$arrSorted = bubbleSort($arr);
+$sortedArr = bubbleSort($arr);
 
-echo "Array Sorted:\n";
+echo "Sorted Array:\n";
 
-foreach ($arrSorted as $a)
+foreach ($sortedArr as $a)
 	echo "$a\n";
 ?>
