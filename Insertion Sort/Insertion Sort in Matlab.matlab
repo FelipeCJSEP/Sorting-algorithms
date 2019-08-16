@@ -12,7 +12,7 @@ function is = insertionSort(arr)
 		end
 	end
 
-	gs = arr;
+	is = arr;
 end
 
 % code only to call and test the sort function
