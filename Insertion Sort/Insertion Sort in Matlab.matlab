@@ -2,7 +2,7 @@
 
 % function algorithm that returns the sorted array
 % algoritmo da função que retorna o array ordenado
-function gs = insertionSort(arr)
+function is = insertionSort(arr)
 	for i = 2: length(arr)
 		j = i;
 
