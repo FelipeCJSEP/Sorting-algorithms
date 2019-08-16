@@ -1,4 +1,4 @@
-// BUBBLE SORT IN PASCAL
+// INSERTION SORT IN PASCAL
 
 program Bubble_Sort;
 
