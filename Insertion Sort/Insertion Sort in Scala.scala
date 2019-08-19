@@ -1,6 +1,6 @@
 // INSERTION SORT IN SCALA
 
-object Cocktail_Shaker_Sort
+object Insertion_Sort
 {
 	// function algorithm that returns the sorted array
 	// algoritmo da função que retorna o array ordenado
