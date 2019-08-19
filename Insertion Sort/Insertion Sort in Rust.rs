@@ -4,7 +4,7 @@
 // algoritmo da função que retorna o array ordenado
 fn insertion_sort(mut _arr: Vec<i32>) -> Vec<i32>
 {
-	for i in 1.._arr.iter().count()
+	for i in 2.._arr.iter().count()
 	{
 		let mut j = i;
 
