@@ -12,7 +12,7 @@ binaryInsertionSort <- function(arr)
 
 		while (first <= last)
 		{
-			mid = (first + last) %/% 2
+			mid <- (first + last) %/% 2
 
 			if (selected > arr[mid])
 				first <- mid + 1
