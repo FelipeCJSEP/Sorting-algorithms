@@ -1,6 +1,6 @@
 // BINARY INSERTION SORT IN SCALA
 
-object Insertion_Sort
+object Binary_Insertion_Sort
 {
 	// function algorithm that returns the sorted array
 	// algoritmo da função que retorna o array ordenado
