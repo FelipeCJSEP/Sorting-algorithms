@@ -1,6 +1,6 @@
 ' BINARY INSERTION SORT IN VISUAL BASIC
 
-Module Insertion_Sort
+Module Binary_Insertion_Sort
 	' function algorithm that returns the sorted array
 	' algoritmo da função que retorna o array ordenado
 	Function binaryInsertionSort(ByVal ParamArray arr As Integer()) As Integer()
