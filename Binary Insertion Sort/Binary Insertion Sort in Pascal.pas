@@ -1,6 +1,6 @@
 // BINARY INSERTION SORT IN PASCAL
 
-program Bubble_Sort;
+program Binary_Insertion_Sort;
 
 type
 	arrayOfInteger = array of integer;
